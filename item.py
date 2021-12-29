@@ -36,3 +36,11 @@ class Item:
                 f'old price: {self.old_price}\n'
                 f'price: {self.price}'
                 )
+    def __iter__(self):
+        yield 'name', self.name
+        yield 'link', self.link
+        yield 'description', self.description
+        yield 'sizes', self.sizes
+        yield 'available sizes', self.sizes_available
+        yield 'old price', self.old_price
+        yield'price', self.price

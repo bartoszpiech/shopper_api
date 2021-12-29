@@ -7,10 +7,12 @@ Python web-app that tracks items on the zara website. It was built originally us
 It will use BeautifulSoup module to scrap the Zara website, then I'll build the web API to handle all the operations. On top of that I'll build the website for users to add items that they like, delete bought items, etc.
 
 ## TODO
-- [ ] Build web scraper using BeautifulSoup,
-- [ ] Make Item class that collects all the data from Zara website,
-- [ ] Extend the app to be able to track multiple other websites (Reserved, Nike, etc.),
+- [x] Build web scraper using BeautifulSoup,
+- [x] Make Item class that collects all the data from Zara website,
+- [ ] Create flask server,
+- [ ] Create cron/etc/Flask-crontab,
+- [ ] Create Notification server that sends info to email / discord bot / element bot,
 - [ ] Make automatic script that uses user data and sends available items to cart, fills user fields and waits for CC info to be added,
 - [ ] Create UI using probably some Javascript web framework,
-- [ ] Create Notification server that sends info to email / discord bot / element bot,
+- [ ] Extend the app to be able to track multiple other websites (Reserved, Nike, etc.),
 - [ ] Maybe react native app or something that will send notifications directly into user phones.
