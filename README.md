@@ -9,7 +9,9 @@ It will use BeautifulSoup module to scrap the Zara website, then I'll build the 
 ## TODO
 - [x] Build web scraper using BeautifulSoup,
 - [x] Make Item class that collects all the data from Zara website,
-- [ ] Create flask server,
+- [x] Create flask server,
+- [ ] Add color scraper for items that have multiple color options,
+- [ ] Convert price scraping to use class attributes instead of primitive string slicing,
 - [ ] Create cron/etc/Flask-crontab,
 - [ ] Create Notification server that sends info to email / discord bot / element bot,
 - [ ] Make automatic script that uses user data and sends available items to cart, fills user fields and waits for CC info to be added,

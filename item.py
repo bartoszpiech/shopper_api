@@ -11,7 +11,7 @@ class Item:
         self.link = link
         self.sizes = []
         self.sizes_available = []
-        self.name = soup.find('h1', class_='product-detail-info__name').text.capitalize()
+        self.name = soup.find('h1', class_='product-detail-info__header-name').text.capitalize()
         self.description = soup.find('div', class_='product-detail-description').p.text
         sizes_ul = soup.find('ul', class_='product-detail-size-selector__size-list')
         prices = soup.find('div', class_='product-detail-info__price').text.replace(',','.').split('PLN')
