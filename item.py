@@ -14,11 +14,10 @@ class Item:
         self.name = soup.find('h1', class_='product-detail-info__header-name').text.capitalize()
         self.description = soup.find('div', class_='product-detail-description').p.text
         sizes_ul = soup.find('ul', class_='product-detail-size-selector__size-list')
-        prices = soup.find('div', class_='product-detail-info__price').text.replace(',','.').split('PLN')
-        self.old_price = float(prices[0])
-        self.price = self.old_price
-        if len(prices) > 2:
-            self.price = float(prices[1])
+        self.price = float(soup.find('span', class_='price-current__amount').text.replace(',','.').replace(' PLN',''))
+        self.old_price = self.price
+        if soup.find('span', class_='price-old__amount'):
+            self.old_price = float(soup.find('span', class_='price-old__amount').text.replace(',','.').replace(' PLN',''))
         for li in sizes_ul:
             stock = li['data-qa-action']
             size = li.span.text
