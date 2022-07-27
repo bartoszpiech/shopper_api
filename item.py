@@ -22,7 +22,7 @@ class Item:
             stock = li['data-qa-action']
             size = li.span.text
             self.sizes.append(size)
-            if li['data-qa-action'] == 'size-in-stock':
+            if li['data-qa-action'] == 'size-in-stock' or li['data-qa-action'] == 'size-low-on-stock':
                 self.sizes_available.append(size)
 
     def __repr__(self):
